@@ -43,7 +43,7 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-const Todo = require('./models/ToDo.js');
+const Todo = require('./models/Todo.js');
 
 // Protect all todo routes with authentication and associate todos with logged-in user
 
