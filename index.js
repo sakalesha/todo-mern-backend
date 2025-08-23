@@ -111,6 +111,14 @@ app.put('/todos/:id', authenticateToken, async (req, res) => {
   }
 });
 
+// Version field
+const backendVersion = require('./package.json').version;
+
+app.get('/api/version', (req, res) => {
+  res.json({ version: backendVersion });
+});
+
+
 // Start the server, using environment PORT if available
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
